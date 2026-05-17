@@ -1,8 +1,14 @@
 const mongoose = require('mongoose');
 
+const MONGODB_URI = process.env.MONGODB_URI || 
+  'mongodb+srv://rahma:YOUR_PASSWORD@maisys-db.may4ses.mongodb.net/maisys_db?appName=maisys-db';
+
 const connectDatabase = async () => {
   try {
-    const conn = await mongoose.connect(process.env.MONGODB_URI); // ✅ من الـ environment
+    console.log('🔵 Connecting to MongoDB...');
+    console.log('🔵 URI starts with:', MONGODB_URI.substring(0, 30));
+    
+    const conn = await mongoose.connect(MONGODB_URI);
 
     console.log(`✅ MongoDB Connected: ${conn.connection.host}`);
     console.log(`📁 Database Name: ${conn.connection.name}`);
