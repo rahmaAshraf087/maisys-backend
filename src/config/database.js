@@ -2,10 +2,7 @@ const mongoose = require('mongoose');
 
 const connectDatabase = async () => {
   try {
-    const conn = await mongoose.connect("mongodb://127.0.0.1:27017/maisys_db",{
-      useNewUrlParser : true ,
-      useUnifiedTopology : true
-    });
+    const conn = await mongoose.connect(process.env.MONGODB_URI); // ✅ من الـ environment
 
     console.log(`✅ MongoDB Connected: ${conn.connection.host}`);
     console.log(`📁 Database Name: ${conn.connection.name}`);
