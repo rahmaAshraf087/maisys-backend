@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const MONGODB_URI = process.env.MONGODB_URI || 
-  'mongodb+srv://rahma:YOUR_PASSWORD@maisys-db.may4ses.mongodb.net/maisys_db?appName=maisys-db';
+  'mongodb+srv://rahma:ra67593975@maisys-db.may4ses.mongodb.net/maisys_db?appName=maisys-db';
 
 const connectDatabase = async () => {
   try {
