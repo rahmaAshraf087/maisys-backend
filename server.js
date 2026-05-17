@@ -14,7 +14,7 @@ if (!process.env.JWT_SECRET) {
 }
 
 // الـ Port
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 3000;
 
 // دالة لتشغيل الـ Server
 const startServer = async () => {
